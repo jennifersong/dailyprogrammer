@@ -1,8 +1,8 @@
 #####################################################################
 # 
 #        ORIGINAL PROBLEM:
-#        Given an integer N and N strings, print the 90-degree
-#                 string transpositions.
+#        Calculate the average score on a series of assignments for 
+#        each student in a given class and for the entire class.
 #
 #        For more information, see the original prompt at 
 #        http://www.reddit.com/r/dailyprogrammer/comments/1kphtf/081313_challenge_136_easy_student_management/
