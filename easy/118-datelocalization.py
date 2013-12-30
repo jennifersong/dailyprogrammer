@@ -9,7 +9,6 @@
 #        http://www.reddit.com/r/dailyprogrammer/comments/16z9oj/012113_challenge_118_easy_date_localization/
 #
 #####################################################################
-
 import datetime, re
 
 s = raw_input()
