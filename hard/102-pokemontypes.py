@@ -42,4 +42,4 @@ def type_effect(move, defending_pokemon):
 			multiplier *= get_type_effectiveness(move_type, pokemon_type)
 		print multiplier
 	
-type_effect("Earthquakesdf", "Dewgong")
+type_effect("Earthquake", "Dewgong")
