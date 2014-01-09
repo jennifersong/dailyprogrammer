@@ -21,4 +21,4 @@ def contains_all_vowels(file):
 			if re.sub('[^aeiouy]', '', word) == "aeiouy":
 				print word.strip()
 		
-contains_all_vowels("enable1.txt")
+contains_all_vowels("../files/enable1.txt")
