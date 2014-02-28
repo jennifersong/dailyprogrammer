@@ -10,19 +10,22 @@
 #####################################################################
 from __future__ import print_function
 from collections import Counter
-import string
+from string import lowercase
 
-n = int(raw_input())
-sentences = [sentence.lower() for sentence in (raw_input() for x in xrange(n))]
-	
-for current in sentences:
-	c = Counter(current)
-	is_pangram = True
-	for letter in string.lowercase:
-		if c[letter] == 0:
-			is_pangram = False
-			break
-	print(is_pangram, end='')
-	for letter in string.lowercase:
-		print(", {key}: {count}".format(key=letter, count=c[letter]), end='')
-	print("")
+def is_pangram(sentence):
+    c = Counter(sentence)
+    for letter in lowercase:
+        if c[letter] == 0:
+            print("False", end='')
+            break
+    else:
+        print("True", end='')
+    for letter in lowercase:
+        print(", {key}: {count}".format(key=letter, count=c[letter]), end='')
+    print("")
+        
+if __name__ == "__main__":
+    n = int(raw_input())
+    sentences = (sentence.lower() for sentence in (raw_input() for x in xrange(n)))
+    for sentence in sentences:
+        is_pangram(sentence)

@@ -19,10 +19,11 @@ def full_rotation(num_digits):
 
 def combination_lock():
 	digits = map(int, raw_input().split())
-	n, first, second, third = digits[0], digits[1], digits[2], digits[3]
+	n, first, second, third = digits
 
 	total = full_rotation(n)*3 + clockwise(0, first, n) + \
 	counterclockwise(first, second, n) + clockwise(second, third, n)
 	return total
 
-print combination_lock()
+if __name__ == "__main__":
+    print combination_lock()

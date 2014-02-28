@@ -8,14 +8,14 @@
 #        http://www.reddit.com/r/dailyprogrammer/comments/1jtryq/080613_challenge_134_easy_ndivisible_digits/
 #
 #####################################################################
-n, m = map(int, raw_input().split())
-numList = xrange(1, int(''.join(['1', '0' * n])))
+def largest_divisor(num_digits, divisor):
+    numList = xrange(divisor, int(''.join(['1', '0' * num_digits])))
+    for element in reversed(numList):
+        if element % divisor == 0:
+            print element
+            return
+    print "No solution found"
 
-for element in reversed(numList):
-	if m > element:		# no answer so don't need to cycle through entire list
-		break
-	if element % m == 0:
-		print element
-		exit(0)
-		
-print "No solution found"
+if __name__ == "__main__":
+    n, m = (int(x) for x in raw_input().split())
+    largest_divisor(num_digits = n, divisor = m)
