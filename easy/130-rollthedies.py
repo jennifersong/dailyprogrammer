@@ -10,6 +10,10 @@
 #####################################################################
 import random
 
-n, m = map(int, raw_input().split("d"))
-random.seed()
-print ' '.join([str(random.randrange(1, m+1)) for x in xrange(n)])
+def roll_dice(n, m):
+    print ' '.join((str(random.randrange(1, m+1)) for x in xrange(n)))
+
+if __name__ == "__main__":
+    n, m = (int(arg) for arg in raw_input().split("d"))
+    random.seed()
+    roll_dice(n, m)

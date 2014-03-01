@@ -17,12 +17,14 @@ def dp_perpetual_coin_return(coin):
 		 + dp_perpetual_coin_return(coin/4)
 	return return_dict[coin]
 	
-print dp_perpetual_coin_return(int(raw_input()))
+if __name__ == "__main__":
+    print dp_perpetual_coin_return(int(raw_input()))
 
 #####################################################################
 #		 The code below does not use memoization, and is much slower.
 #####################################################################
 # def perpetual_coin_return(coin):
 # 	return 1 if coin == 0 else perpetual_coin_return(coin/2) + perpetual_coin_return(coin/3) + perpetual_coin_return(coin/4)
-# 	
-# print perpetual_coin_return(int(raw_input()))
+#
+# if __name__ == "__main__":	
+#   print perpetual_coin_return(int(raw_input()))

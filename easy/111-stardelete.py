@@ -9,4 +9,9 @@
 #
 #####################################################################
 import re
-print re.sub(".?\*+.?", "", raw_input())
+
+def del_stars_and_neighbors(strng):
+    print re.sub(".?\*+.?", "", strng)
+
+if __name__ == "__main__":
+    del_stars_and_neighbors(raw_input())
