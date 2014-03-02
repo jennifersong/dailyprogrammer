@@ -16,4 +16,5 @@ def titlecase(strng, exceptions):
 		capitalized.append(word.capitalize() if word not in exceptions else word)
 	return " ".join(capitalized)
 		
-print titlecase('the quick brown fox jumps over the lazy dog', ['the', 'fox'])
+if __name__ == "__main__":
+    print titlecase('the quick brown fox jumps over the lazy dog', ['the', 'fox'])

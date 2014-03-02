@@ -10,12 +10,12 @@
 #####################################################################
 import requests, re
 
-r = requests.get("http://www.lenntech.com/periodic/name/alphabetic.htm")
-symbols = re.findall("http://www.lenntech.com/Periodic-chart-elements/(\w+)-en.htm", r.text)
-
 def highlight_symbols(string):
-	symbols_in = [str(sym) for sym in symbols if str(sym).lower() in string.lower()]	
+	symbols_in = (str(sym) for sym in symbols if str(sym).lower() in string.lower())
 	for symbol in symbols_in:
-		print re.sub(symbol, "[" + symbol + "]", string, 1, re.IGNORECASE)
+		print re.sub(symbol, "".join(("[", symbol, "]")), string, 1, re.IGNORECASE)
 
-highlight_symbols(raw_input())
+if __name__ == "__main__":
+    r = requests.get("http://www.lenntech.com/periodic/name/alphabetic.htm")
+    symbols = re.findall("http://www.lenntech.com/Periodic-chart-elements/(\w+)-en.htm", r.text)
+    highlight_symbols(raw_input())

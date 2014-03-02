@@ -13,4 +13,6 @@ import fileinput
 def is_alphabetized(string):
 	return ''.join(sorted(string)) == string
 	
-print len([word.strip() for word in fileinput.input() if is_alphabetized(word.strip())])
+if __name__ == "__main__":
+    # Provide ../files/enable1.txt as a command-line argument for this to work.
+    print len([word.strip() for word in fileinput.input() if is_alphabetized(word.strip())])
